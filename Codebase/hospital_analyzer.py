@@ -32,7 +32,6 @@ def load_and_clean_data(file_path):
 
     original_count = len(df)
 
-    # The assignment's duplicate example repeats the same Patient_ID.
     df = df.drop_duplicates(subset="Patient_ID", keep="first").copy()
     duplicates_removed = original_count - len(df)
 
